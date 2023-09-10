@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\MobilController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,5 +19,6 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', [App\Http\Controllers\PageController::class, 'index']);
-Route::get('/mahasiswa', [App\Http\Controllers\PageController::class, 'tampil']);
+Route::get('/', [PageController::class, 'index']);
+Route::get('/mahasiswa', [PageController::class, 'tampil']);
+Route::get('/mobil', [MobilController::class, 'merk']);
