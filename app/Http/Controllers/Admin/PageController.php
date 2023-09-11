@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
 use App\Http\Controllers\Coba\Foo;
+use App\Http\Controllers\Coba\Buah;
 
 class PageController extends Controller {
     public function index() {
@@ -26,5 +27,9 @@ class PageController extends Controller {
     public function cobaClass() {
         $foo = new Foo();
         echo $foo->bar();
+    }
+
+    public function cobaBuah() {
+        echo Buah::mangga();
     }
 }

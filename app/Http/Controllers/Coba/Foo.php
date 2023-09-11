@@ -7,4 +7,3 @@ class Foo {
         echo "Ini berasal dari Method Bar di dalam class Foo";
     }
 }
-?>
