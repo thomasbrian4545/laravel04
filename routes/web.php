@@ -21,4 +21,5 @@ use App\Http\Controllers\MobilController;
 
 Route::get('/', [PageController::class, 'index']);
 Route::get('/mahasiswa', [PageController::class, 'tampil']);
+Route::get('/coba-facade', [PageController::class, 'cobaFacade']);
 Route::get('/mobil', [MobilController::class, 'merk']);
