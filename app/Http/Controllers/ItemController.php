@@ -12,7 +12,8 @@ class ItemController extends Controller
      * Handle the incoming request.
      */
     // public function __invoke(Request $request): string
-    public function __invoke(Request $request): View
+    // public function __invoke(Request $request): View
+    public function __invoke(): Response
     {
         // return "Method __invoke() milik ItemController dijalankan";
         $arrMahasiswa = [
@@ -20,6 +21,7 @@ class ItemController extends Controller
             "Lisa Permata"
         ];
 
-        return view('mahasiswa')->with('mahasiswa', $arrMahasiswa);
+        // return view('mahasiswa')->with('mahasiswa', $arrMahasiswa);
+        return response()->view('mahasiswa', ['mahasiswa' => $arrMahasiswa]);
     }
 }
