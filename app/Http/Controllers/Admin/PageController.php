@@ -5,8 +5,11 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
 use App\Http\Controllers\Coba\Foo;
 use App\Http\Controllers\Coba\Buah;
+use App\Http\Controllers\Coba\Minuman;
 
 class PageController extends Controller {
+    use Minuman;
+
     public function index() {
         // return "Halaman Home";
         return view('welcome');
@@ -31,5 +34,9 @@ class PageController extends Controller {
 
     public function cobaBuah() {
         echo Buah::mangga();
+    }
+
+    public function cobaMinuman() {
+        echo $this->kopi();
     }
 }

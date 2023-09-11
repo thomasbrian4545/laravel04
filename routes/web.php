@@ -24,4 +24,5 @@ Route::get('/mahasiswa', [PageController::class, 'tampil']);
 Route::get('/coba-facade', [PageController::class, 'cobaFacade']);
 Route::get('/coba-class', [PageController::class, 'cobaClass']);
 Route::get('/coba-buah', [PageController::class, 'cobaBuah']);
+Route::get('/coba-minuman', [PageController::class, 'cobaMinuman']);
 Route::get('/mobil', [MobilController::class, 'merk']);
