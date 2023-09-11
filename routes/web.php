@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\MobilController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\ItemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +36,4 @@ Route::get('/gallery', [MahasiswaController::class, 'gallery'])->name('gallery')
 Route::get('/informasi/{fakultas}/{jurusan}', [MahasiswaController::class, 'info'])->name('info');
 
 Route::get('/produk', ProdukController::class);
+Route::get('/item', ItemController::class);
