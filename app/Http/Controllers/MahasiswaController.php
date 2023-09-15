@@ -31,9 +31,23 @@ class MahasiswaController extends Controller
         return view('gallery');
     }
 
-    public function info($fakultas, $jurusan)
+    public function info($fakultas, $jurusan = null)
     {
-        $data = [$fakultas, $jurusan];
-        return view('informasi')->with('data', $data);
+        $list_fakultas = ['Teknik', 'Ekonomi'];
+        $list_jurusan = ['Fisika', 'Kimia', 'Akuntansi'];
+
+        if ($jurusan == null) {
+            if (in_array($fakultas, $list_fakultas)) {
+                $jurusan = 'Tanpa Jurusan';
+            } elseif (in_array($fakultas, $list_jurusan)) {
+                $jurusan = $fakultas;
+                $fakultas = 'Tanpa Fakultas';
+            }
+        }
+
+        return view('informasi', [
+            'fakultas' => $fakultas,
+            'jurusan' => $jurusan,
+        ]);
     }
 }

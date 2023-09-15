@@ -6,6 +6,7 @@ use App\Http\Controllers\MobilController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\TestingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +34,9 @@ Route::get('/mobil', [MobilController::class, 'merk']);
 Route::get('/mahasiswa', [MahasiswaController::class, 'mahasiswa'])->name('mahasiswa');
 Route::get('/dosen', [MahasiswaController::class, 'dosen'])->name('dosen');
 Route::get('/gallery', [MahasiswaController::class, 'gallery'])->name('gallery');
-Route::get('/informasi/{fakultas}/{jurusan}', [MahasiswaController::class, 'info'])->name('info');
+Route::get('/informasi/{fakultas}/{jurusan?}', [MahasiswaController::class, 'info'])->name('info');
 
 Route::get('/produk', ProdukController::class);
 Route::get('/item', ItemController::class);
+
+Route::get('/testing', TestingController::class);
